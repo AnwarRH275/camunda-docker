@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<process-application
+        xmlns="http://www.camunda.org/schema/1.0/ProcessApplication"
+>
+    <process-archive name="Order Pizza">
+        <process-engine>default</process-engine>
+        <resource>public/order-pizza.bpmn</resource>
+        <resource>public/place-order.json</resource>
+        <resource>public/assign-pizza-maker.json</resource>
+        <properties>
+            <property name="isDeleteUponUndeploy">false</property>
+            <property name="isScanForProcessDefinitions">true</property>
+            <property name="resourceRootPath">pa:tenants/all</property>
+        </properties>
+    </process-archive>
+</process-application>
